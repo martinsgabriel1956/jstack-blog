@@ -44,6 +44,12 @@ export default function App() {
     setPosts(updateMockedPosts);
   }
 
+  function handleRemovePost(postId) {
+    const getFilteredPost = (prevState) =>
+      prevState.filter((post) => post.id !== postId);
+    setPosts(getFilteredPost);
+  }
+
   return (
     <>
       <Header>
@@ -53,16 +59,22 @@ export default function App() {
 
       <hr />
 
-      {posts.map((post) => (
-        <Post
-          key={post.title}
-          likes={post.likes}
-          post={{
-            title: post.title,
-            subtitle: post.subtitle,
-          }}
-        />
-      ))}
+      {posts.map((post) => {
+        const currentPost = {
+          id: post.id,
+          title: post.title,
+          subtitle: post.subtitle,
+        };
+
+        return (
+          <Post
+            key={post.title}
+            likes={post.likes}
+            onRemove={handleRemovePost}
+            post={currentPost}
+          />
+        );
+      })}
     </>
   );
 }
