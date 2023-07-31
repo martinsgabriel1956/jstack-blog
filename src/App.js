@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Post from "./Post";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 const mockedPosts = [
   {
@@ -54,14 +55,12 @@ export default function App() {
   }
 
   return (
-    <>
+    <ThemeProvider>
       <Header>
         <h2>Daily posts</h2>
         <button onClick={handleRefresh}>Update</button>
       </Header>
-
       <hr />
-
       {posts.map((post) => (
         <Post
           key={post.title}
@@ -70,6 +69,6 @@ export default function App() {
           post={post}
         />
       ))}
-    </>
+    </ThemeProvider>
   );
 }
