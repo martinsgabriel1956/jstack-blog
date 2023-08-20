@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Post from "./Post";
-import { ThemeProvider } from "./providers/ThemeProvider";
+import Header from "../../components/Header";
+import Post from "../../components/Post";
+import { ThemeProvider } from "../../providers/ThemeProvider";
 
-import styles from "./styles/App.scss";
+import styles from "../../styles/App.scss";
 
 const mockedPosts = [
   {
