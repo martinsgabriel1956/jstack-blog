@@ -3,6 +3,8 @@ import Header from "./Header";
 import Post from "./Post";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
+import styles from "./styles/App.css";
+
 const mockedPosts = [
   {
     id: Math.random(),
@@ -57,7 +59,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2>Daily posts</h2>
+        <h2 className={styles.title}>Daily posts</h2>
         <button onClick={handleRefresh}>Update</button>
       </Header>
       <hr />
