@@ -12,6 +12,7 @@ const mockedPosts = [
     subtitle: "First New Subtitle",
     likes: 20,
     read: false,
+    removed: false,
   },
   {
     id: Math.random(),
@@ -19,6 +20,7 @@ const mockedPosts = [
     subtitle: "Second New Subtitle",
     likes: 10,
     read: true,
+    removed: false,
   },
   {
     id: Math.random(),
@@ -26,6 +28,7 @@ const mockedPosts = [
     subtitle: "Third New Subtitle",
     likes: 50,
     read: false,
+    removed: false,
   },
 ];
 
@@ -51,8 +54,17 @@ export default function App() {
   }
 
   function handleRemovePost(postId) {
-    const getFilteredPost = (prevState) =>
-      prevState.filter((post) => post.id !== postId);
+    const modifiedPosts = (post) =>
+      post.id === postId
+        ? {
+            ...post,
+            removed: true,
+          }
+        : {
+            ...post,
+          };
+
+    const getFilteredPost = (prevState) => prevState.map(modifiedPosts);
     setPosts(getFilteredPost);
   }
 
