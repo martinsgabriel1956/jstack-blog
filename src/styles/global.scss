@@ -1,9 +1,12 @@
+$bg: #222;
+$text: #fff;
+
 * {
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background: #222;
-  color: #fff;
+  background: $bg;
+  color: $text;
   font-family: sans-serif;
 }

@@ -3,7 +3,7 @@ import Header from "./Header";
 import Post from "./Post";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
-import styles from "./styles/App.css";
+import styles from "./styles/App.scss";
 
 const mockedPosts = [
   {
