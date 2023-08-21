@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import Post from "../../components/Post";
 import { ThemeProvider } from "../../providers/ThemeProvider";
-// import Title from "../../components/UI/Title";
 
-import styles from "../../styles/App.scss";
 import { Title } from "./styles";
 
 const mockedPosts = [
