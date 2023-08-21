@@ -20,15 +20,3 @@ export default function Post(props) {
     </Container>
   );
 }
-
-Post.propTypes = {
-  onRemove: PropTypes.func.isRequired,
-  post: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-    read: PropTypes.bool.isRequired,
-    removed: PropTypes.bool.isRequired,
-  }).isRequired,
-};
