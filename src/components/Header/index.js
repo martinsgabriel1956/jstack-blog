@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Button } from "../Button";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { Title } from "./styles";
+import Title from "../UI/Title";
 
 export default function Header(props) {
   const { onToggleTheme } = useContext(ThemeContext);

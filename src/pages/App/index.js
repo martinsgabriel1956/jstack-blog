@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import Post from "../../components/Post";
 import { ThemeProvider } from "../../providers/ThemeProvider";
+// import Title from "../../components/UI/Title";
 
 import styles from "../../styles/App.scss";
+import { Title } from "./styles";
 
 const mockedPosts = [
   {
@@ -71,7 +73,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2 className={styles.title}>Daily posts</h2>
+        <Title as="h2">Daily posts</Title>
         <button onClick={handleRefresh}>Update</button>
       </Header>
       <hr />
