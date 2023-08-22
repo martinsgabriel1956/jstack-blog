@@ -6,7 +6,7 @@ import themes from "./styles/themes";
 
 export default function App() {
   return (
-    <ThemeProvider theme={themes}>
+    <ThemeProvider theme={themes.light}>
       <GlobalStyles />
       <Layout />
     </ThemeProvider>
