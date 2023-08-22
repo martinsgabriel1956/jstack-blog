@@ -1,11 +1,12 @@
 import React from "react";
+
 import { Container } from "./styles";
 
-export default function Header(props) {
+export default function Post({ title, description }) {
   return (
     <Container>
-      <h1>JStack's Blog</h1>
-      <button>🌞</button>
+      <h2>{title}</h2>
+      <small>{description}</small>
     </Container>
   );
 }

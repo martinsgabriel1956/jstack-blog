@@ -1,9 +1,16 @@
-const { createGlobalStyle } = require("styled-components");
+import { createGlobalStyle, css } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
-    background-color: #222;
+    ${(props) => css`
+      background: ${props.theme.backgroundColor};
+      color: ${props.theme.textColor};
+    `}
+
     font-family: sans-serif;
-    color: #FFF;
   }
 `;
