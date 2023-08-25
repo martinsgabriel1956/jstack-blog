@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useLayoutEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import Layout from "./components/Layout";
 import { GlobalStyles } from "./styles/global";
@@ -18,10 +18,7 @@ export default function App() {
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
-      <button onClick={handleToggleTheme}>Change theme</button>
-      {theme === "dark" && (
-        <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
-      )}
+      <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
     </ThemeProvider>
   );
 }
