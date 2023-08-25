@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import Layout from "./components/Layout";
 import { GlobalStyles } from "./styles/global";
@@ -14,6 +14,10 @@ export default function App() {
   function handleToggleTheme() {
     setTheme((prevState) => (prevState === "dark" ? "light" : "dark"));
   }
+
+  useEffect(() => {
+    console.debug("Theme changed to", theme);
+  }, []);
 
   return (
     <ThemeProvider theme={currentTheme}>
