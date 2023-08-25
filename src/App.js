@@ -15,14 +15,13 @@ export default function App() {
     setTheme((prevState) => (prevState === "dark" ? "light" : "dark"));
   }
 
-  useEffect(() => {
-    console.debug("Theme changed to", theme);
-  }, []);
-
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
-      <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
+      <button onClick={handleToggleTheme}>Change theme</button>
+      {theme === "dark" && (
+        <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
+      )}
     </ThemeProvider>
   );
 }
