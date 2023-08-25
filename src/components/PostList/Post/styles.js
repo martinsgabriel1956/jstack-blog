@@ -1,21 +1,24 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.article`
-  background: ${({ theme }) => theme.postBackgroundColor};
+  ${({ theme }) => css`
+    background: ${theme.postBackgroundColor};
+    padding: ${theme.spacing.large}px;
+    border-radius: ${theme.borderRadius};
+
+    h2 {
+      margin: 0 0 ${theme.spacing.small}px;
+    }
+
+    & + article {
+      margin-top: ${theme.spacing.small}px;
+    }
+  `}
+
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  border-radius: 10px;
-
-  h2 {
-    margin: 0 0 8px;
-  }
 
   small {
     opacity: 0.7;
-  }
-
-  & + article {
-    margin-top: 8px;
   }
 `;
