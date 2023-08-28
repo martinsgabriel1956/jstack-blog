@@ -6,6 +6,7 @@ import PostsList from "../PostList";
 export default function Layout() {
   return (
     <>
+      {undefined.map((item) => item)}
       <Header />
       <PostsList />
       <Footer />

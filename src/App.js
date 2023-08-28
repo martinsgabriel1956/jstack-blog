@@ -23,6 +23,13 @@ export default class App extends Component {
     });
   }
 
+  componentDidCatch(error, info) {
+    console.log({
+      error,
+      info,
+    });
+  }
+
   constructor(props) {
     super(props);
   }
