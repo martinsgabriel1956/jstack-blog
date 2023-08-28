@@ -7,6 +7,10 @@ import { GlobalStyles } from "./styles/global";
 import { ThemeContext } from "./contexts/ThemeContext";
 
 export default class App extends Component {
+  componentDidMount() {
+    console.log("App mounted");
+  }
+
   constructor(props) {
     super(props);
   }
