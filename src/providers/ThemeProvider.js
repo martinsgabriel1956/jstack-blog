@@ -18,17 +18,16 @@ export class ThemeProvider extends Component {
     };
   }
 
-  handleToggleTheme = () => {
-    const storageTheme = () => {
+  componentDidUpdate = (_, prevState) => {
+    if (prevState.theme !== this.state.theme) {
       localStorage.setItem("theme", JSON.stringify(this.state.theme));
-    };
+    }
+  };
 
-    this.setState(
-      (prevState) => ({
-        theme: prevState.theme === "dark" ? "light" : "dark",
-      }),
-      storageTheme
-    );
+  handleToggleTheme = () => {
+    this.setState((prevState) => ({
+      theme: prevState.theme === "dark" ? "light" : "dark",
+    }));
   };
 
   render() {
