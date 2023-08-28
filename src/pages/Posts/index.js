@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container } from "./styles";
-import Post from "./Post";
+import Post from "../../components/Post";
 import posts from "../../utils/posts";
 
-export function PostsList() {
+export function Posts() {
   return (
     <Container>
       {posts.map((post) => (
