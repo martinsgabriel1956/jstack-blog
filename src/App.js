@@ -7,19 +7,17 @@ import themes from "./styles/themes";
 export default class App extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      theme: "dark",
-    };
-
-    this.handleToggleTheme = this.handleToggleTheme.bind(this);
   }
 
-  handleToggleTheme() {
+  state = {
+    theme: "dark",
+  };
+
+  handleToggleTheme = () => {
     this.setState(({ theme }) => ({
       theme: theme === "dark" ? "light" : "dark",
     }));
-  }
+  };
 
   render() {
     const { theme } = this.state;
