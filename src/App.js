@@ -11,6 +11,10 @@ export default class App extends Component {
     isChanged: false,
   };
 
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     console.log("App mounted");
   }
@@ -40,23 +44,115 @@ export default class App extends Component {
     return true;
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <ThemeProvider>
-        <button
-          onClick={() => this.setState({ isChanged: !this.state.isChanged })}
-        >
-          Change state
-        </button>
         <ThemeContext.Consumer>
-          {({ theme }) => (
+          {({ theme, handleToggleTheme }) => (
             <StyledThemeProvider theme={themes[theme] || themes.dark}>
               <GlobalStyles />
-              <Layout />
+              <button onClick={handleToggleTheme}>Change state</button>
+              {theme === "dark" && <Layout />}
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
             </StyledThemeProvider>
           )}
         </ThemeContext.Consumer>
