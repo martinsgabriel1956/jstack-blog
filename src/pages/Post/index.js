@@ -20,13 +20,18 @@ export class Post extends React.Component {
     this.queryParams = new URLSearchParams(search);
   }
 
-  render() {
-    console.debug(
-      "Post",
-      this.props.match.params,
-      this.queryParams.get("meuQueryParam")
-    );
+  handleNavigate = () => {
+    this.props.history.push("/posts");
+  };
 
-    return <h1>Post</h1>;
+  render() {
+    return (
+      <>
+        <button onClick={this.handleNavigate}>
+          Voltar para a lista de posts
+        </button>
+        <h1>Post</h1>
+      </>
+    );
   }
 }
