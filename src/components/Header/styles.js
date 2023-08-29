@@ -4,7 +4,7 @@ export const Container = styled.header`
   ${({ theme }) => css`
     background: ${theme.headerBackgroundColor};
     padding: 0 ${theme.spacing.large}px;
-    border-radius: ${theme.borderRadius}px;
+    border-radius: ${theme.borderRadius};
 
     button {
       font-size: ${theme.spacing.medium}px;

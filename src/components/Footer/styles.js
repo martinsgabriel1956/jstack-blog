@@ -12,6 +12,10 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: calc(100vw - 64px);
 
   button {
     cursor: pointer;
